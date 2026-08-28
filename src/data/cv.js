@@ -1,0 +1,120 @@
+// CV-uri preluate de pe pagina de echipă a clinicii OftalmoClass.
+// Cheia este numele exact folosit în `doctors` și `staff` din site.js.
+export const careers = {
+  "Dr. Bodea Flaviu": [
+    {
+      heading: "Formarea profesională",
+      items: [
+        "2007-2013 Universitatea de Medicină și Farmacie “Iuliu Hațieganu” Cluj-Napoca, Facultatea de Medicină",
+        "2014-2017 Rezidențiat în Oftalmologie Cluj-Napoca și Oradea",
+        "2016 Wetlab Chirurgia Cataractei Basic, Sofia, Bulgaria",
+        "2016 Congresul Sociețății Europene de Cataractă și Chirurgie Refractivă, Copenhaga",
+        "2017 Wetlab Chirurgia Cataractei Avansat, Sofia, Bulgaria",
+        "2017 Curs OCT Timisoara",
+        "2018 Curs Laser Oftalmologie Basic, Timișoara",
+        "2018 Curs Laser Oftalmologie Avansați, Timișoara",
+        "2018 Medic specialist oftalmologie – Spitalul Clinic Județean de Urgență Oradea",
+        "2018 Asistent Universitar, Facultatea De Medicină Oradea – Departament Oftalmologie",
+        "2018 Școala de chirurgie vitreo-retiniană TVRS Thessaloniki, Grecia",
+        "2019 Formare chirurgie vitreo-retiniană București",
+        "2019 Congresul Societății Europene de Retină – EURETINA, Paris",
+        "2019 Congresul Societății Române de Oftalmologie Sinaia – Speaker",
+        "2020 Congresul Sociețății Române de Glaucom – Speaker",
+        "2022 – Congresul European de Glaucom, Atena, Grecia",
+        "2022 - Congresul Societății Europene de Retină – EURETINA, Hamburg, Germania",
+        "2022 – Congresul European de Cataractă și Chirurgie Refractivă – ESCRS, Milano, Italia",
+        "2022 - Congresul Societății Române de Oftalmologie Sinaia – Speaker",
+        "2022 – Coordonator workshop “Aspecte teoretice și practice ale administrării intravitreene a medicamentelor anti-VEGF” – Oradea",
+        "2023 – Congresul Roman de Glaucom – Brașov, România",
+        "2023 – ASCRS – Congresul Societății Americane de Cataractă și Chirurgie Refractivă – San Diego, SUA",
+        "2023 – Congresul Mondial de Glaucom – Roma, Italia",
+        "2023 – Congresul European de Cataractă și Chirurgie Refractivă ESCRS – Viena, Austria",
+        "2023 – Congresul Societății Europene de Retină – Amsterdam, Olanda",
+        "2023 – Curs chirurgie vitreo-retiniană, ESASO (European School For Advanced Studies in Ophthalmology) – Lugano, Elveția",
+      ],
+    },
+  ],
+  "Dr. Haidu Sorin": [
+    {
+      heading: "Formarea profesională",
+      items: [
+        "Absolvent al Universității din Oradea, Facultatea de Medicină și Farmacie, Specializarea Medicină Generală promoția 2012 – 2018",
+        "Absolvent al rezidențiatului în specialitatea Oftalmologie, promoția 2018 – 2022",
+        "Student doctorand al Școlii Doctorale a Universității din Oradea din 2019",
+      ],
+    },
+    {
+      heading: "Experiența profesională",
+      items: [
+        "Medic Rezident Spitalul Clinic Județean de Urgență din Oradea (2018 – 2022)",
+        "Stagiu de pregătire – Hopital Intercommunal de Creteil, Paris, Franța (2020) – retina medicală",
+        "Stagiu de pregătire – Spitalul Clinic de Urgențe Oftalmologice, București (2021) – chirurgie oculoplastică",
+        "Stagiu de pregătire – Medicana International Hospital, Ankara, Turcia (2022) – tehnici avansate chirurgicale ale segmentului anterior în glaucomul congenital și al adultului",
+      ],
+    },
+    {
+      heading: "Cursuri",
+      items: [
+        "Actualități și principii de tratament laser în fotocoagularea retiniană, Timișoara (2019)",
+        "Principii avansate de tratament laser în bolile oculare, Timișoara (2019)",
+        "Curs strabologie, Cluj-Napoca (2019)",
+        "Curs postuniversitar - Imagistică retiniană și tratamente maculare, Universitatea Paris Est (XII), 2020-2021",
+        "Principii de interpretare și actualități în tehnologiile imagistice retiniene – tomografie în coerență optică și angiofluorografie",
+      ],
+    },
+    {
+      heading: "Congrese",
+      items: [
+        "Congresul Societății Române de Glaucom - Brașov, 17-19/ 11/ 2022",
+        "Congresul Clubului Regal al Medicilor - 15 / 10 / 2022",
+        "Al 40-lea Congres al ESCRS - Milano, 16-20 / 09/ 2022",
+        "Al XI-lea Congres Internațional de Chirurgie a Glaucomului - Geneve, 21-23 / 04/ 2022",
+        "Reuniunea Anuală a României de Suprafață Oculară și Lentile de Contact - Sibiu, 26-28 / 11/ 2021",
+        "Congresul Clubului Regal al Medicilor - 16/10/2021",
+        "Al XIX-lea Congres al Societății Române de Oftalmologie - București, 14-17 / 10/ 2021",
+        "Al VII-lea Congres al Societății Române de Cataractă și Chirurgie Refractivă (Întâlnire Virtuală) - Eforie Nord, 18-20 / 06/ 2021",
+        "Al IX-lea Congres al Societății Române de Strabologie și Oftalmo-pediatrie (Întâlnirea Hibridă) - Brașov, 04-06 / 06/ 2021",
+        "Congresul Euretina (Întâlnire virtuală) - 02-04 / 10/ 2021",
+        "Al 126-lea Congres al Societății Franceze de Oftalmologie (prima întâlnire virtuală) - Paris, 05-06 / 09/ 2021",
+        "Congresul Societății Române de Glaucom - Brașov, 11-14 / 03/ 2020",
+        "Al XVIII-lea Congres al Societății Române de Oftalmologie - Sinaia, 2-5 / 10/ 2019",
+        "Al XXXVII-lea Congres al Societății Europene de Cataractă și Chirurgie Refractivă - Paris, 14-18 / 09/ 2019",
+        "Al VI-lea Congres al Societății Române de Cataractă și Chirurgie Refractivă - Eforie Nord, 13-16/06/2019",
+        "Al 125-lea Congres al Societății Franceze de Oftalmologie - Paris, 11-14 / 05/ 2019",
+        "Congresul AOP (Ateliers d`Ophtalmologie Pratique) - Paris, 14-15 / 12/ 2018",
+        "Congresul AOP (Ateliers d`Ophtalmologie Pratique) - Paris, 08-09 / 12/ 2016",
+        "Al XXXIII-lea Congres al Societății Europene de Cataractă și Chirurgie Refractivă - Barcelone, 05-09 / 09/ 2015",
+        "Al XIII-lea Congres al Societății Române de Oftalmologie - București, 1-4 / 10/ 2014",
+      ],
+    },
+    {
+      heading: "Publicații",
+      items: [
+        "Sindromul congenital tarsal Kink: revizuire literatură și raport de caz, copii, 1 ianuarie 2022",
+        "Trabeculotomie transluminală asistată de gonioscopie pentru glaucomul congenital secundar sindromului Klippel-Trenaunay-Weber: Raport de caz, American Journal of Ophthalmology – Case Reports, 21 octombrie 2022",
+      ],
+    },
+    {
+      heading: "Lucrări științifice prezentate",
+      items: [
+        "Primele rezultate ale unui studiu privind dezvoltarea cataractei la profesioniștii din domeniul sănătății expuși la radiații ionizante – 2019",
+        "Capcană de diagnosticare – 2021",
+        "Primii pași în suturile corneene - 2021",
+        "Tumori rare ale pleoapelor - 2021",
+        "Tumori conjunctivale pigmentate. Ce să fac? - 2021",
+        "Chirurgie oculoplastică și lentile de contact terapeutice - 2021",
+      ],
+    },
+  ],
+  "Asist. Cârgea Teodora": [
+    {
+      heading: "Formarea profesională",
+      items: [
+        "2004 - 2008 Facultatea de Istorie, Geografie și Relații Internaționale Oradea, Specializarea Relații Internaționale și Studii Europene",
+        "2009 Licență în Relații Internaționale și Studii Europene- SNSPA București",
+        "2020 Curs de instruire online privind lentilele ItalLenti",
+        "2019 Curs de instruire online privind lentilele Hoya",
+      ],
+    },
+  ],
+}

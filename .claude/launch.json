@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "oftalmoclass",
+      "runtimeExecutable": "C:/Program Files/nodejs/node.exe",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js", "--port", "5190", "--strictPort"],
+      "port": 5190
+    },
+    {
+      "name": "oftalmoclass-preview",
+      "runtimeExecutable": "C:/Program Files/nodejs/node.exe",
+      "runtimeArgs": [
+        "node_modules/vite/bin/vite.js",
+        "preview",
+        "--port",
+        "4190",
+        "--strictPort"
+      ],
+      "port": 4190,
+      "url": "http://localhost:4190/oftalmoclass/"
+    }
+  ]
+}
