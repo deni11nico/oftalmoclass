@@ -40,16 +40,7 @@ export default function Hero() {
   return (
     <section className="px-2 sm:px-4">
       <div className="panel-light relative isolate overflow-hidden rounded-[2rem] sm:rounded-[2.75rem]">
-        {/* very faint photo texture on the right so the panel is not flat */}
-        <img
-          src={images.heroBackdrop}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-y-0 right-0 hidden w-2/3 object-cover opacity-[0.12] mix-blend-multiply lg:block"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-sky via-sky/60 to-transparent" />
-
-        <div className="relative shell pt-12 pb-12 sm:pt-14 sm:pb-14 lg:pt-16 lg:pb-16">
+        <div className="shell pt-12 pb-12 sm:pt-14 sm:pb-14 lg:pt-16 lg:pb-16">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10">
             <div>
               <h1 className="text-3xl leading-[1.1] font-extrabold tracking-tight text-ink sm:text-4xl lg:text-5xl">

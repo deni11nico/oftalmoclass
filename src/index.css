@@ -69,9 +69,9 @@
     box-shadow: 0 1px 2px rgba(31, 58, 56, 0.04), 0 12px 32px -20px rgba(31, 58, 56, 0.25);
   }
 
-  /* light panel with a gentle sky-to-sage gradient (hero, page headers) */
+  /* light flat panel (hero, page headers, booking band) */
   .panel-light {
-    background-image: linear-gradient(135deg, var(--color-sky) 0%, var(--color-mist) 55%, var(--color-lime-mist) 100%);
+    background-color: var(--color-sky);
   }
 }
 
