@@ -1,0 +1,462 @@
+{
+  "clinic": {
+    "name": "OftalmoClass",
+    "tagline": "Ochii tăi sunt grija noastră",
+    "address": "Bulevardul Decebal nr. 9, Parter, Oradea 410197",
+    "phones": [
+      "0359 195 929",
+      "0772 200 596"
+    ],
+    "hours": "Luni până vineri, 09:00 - 18:30",
+    "facebook": "https://facebook.com/OftalmoClass",
+    "instagram": "https://instagram.com/officeoftalmoclass.ro",
+    "rating": "4,8",
+    "website": "https://deni11nico.github.io/oftalmoclass/"
+  },
+  "pages": {
+    "home": "/",
+    "story": "/povestea-oftalmoclass",
+    "team": "/echipa",
+    "services": "/servicii-medicale",
+    "equipment": "/echipamente-medicale",
+    "products": "/produse",
+    "gallery": "/galerie-media",
+    "articles": "/articole-medicale",
+    "faq": "/intrebari-frecvente",
+    "contact": "/contact"
+  },
+  "about": {
+    "pillars": [
+      {
+        "title": "Personal dedicat",
+        "text": "Medici, asistenți, optometriști și opticieni care rămân disponibili pentru întrebările tale și după ce ai ieșit din cabinet."
+      },
+      {
+        "title": "Rezultatul dorit",
+        "text": "Echipa participă constant la congrese și workshopuri internaționale, așa că tratamentul pe care îl primești ține pasul cu cele mai noi terapii."
+      },
+      {
+        "title": "Gamă largă de servicii",
+        "text": "Îngrijire de la A la Z: investigații detaliate, tratamente personalizate și ochelari de calitate la prețuri rezonabile."
+      },
+      {
+        "title": "Aparatură de top",
+        "text": "Investim continuu în cea mai recentă aparatură oftalmologică, de la producători acreditați internațional."
+      }
+    ],
+    "story": {
+      "title": "Bine ai venit la clinica noastră",
+      "lead": "Pacienții noștri sunt prioritatea noastră, oferim servicii medicale de calitate",
+      "intro": [
+        "Pornită din dorința de a oferi un act medical de excepție, clinica OftalmoClass se ocupă în detaliu de toate particularitățile ochilor pacientului pentru a oferi o vedere sănătoasă.",
+        "Sub coordonarea doctorului Flaviu Bodea, medic specialist oftalmolog și asistent universitar la catedra de oftalmologie a Facultății de Medicină și Farmacie din Oradea, ne concentrăm asupra detaliilor și a celor mai noi terapii în oftalmologie."
+      ],
+      "about": [
+        "Pentru că a ține pasul cu știința și tehnologia de ultimă oră înseamnă progres, echipa de medici și optometriști a clinicii participă la congrese și workshop-uri internaționale în domeniul oftalmologiei, opticii si optometriei.",
+        "Calitatea ramelor comercializate se reflectă în materialele premium folosite în producție, articulații flexibile, rezistență la uzură, design ergonomic adaptat stilului de viață. Culorile și modelele variate oferă alternativa unei alegeri exclusiviste pentru cei moderni sau originali, dar și simplistă sau sobră pentru marii clasici. Lentilele comercializate de Oftalmo Class aduc nume consacrate la nivel mondial în fața ochilor pacienților.",
+        "Lumea privită prin lentilele ItalLenti, oferă claritatea specifică și rigoarea tehnologiei japoneze sau germane. Lentilele monofocale, bifocale, progresive sau degresive pot fi completate cu filtrele speciale antizgâriere, oleofobe sau pentru calculator, în varianta normală, colorată sau fotocromatică (heliomată). Partenerii noștri asigură garanția calității pentru fiecare lentilă.",
+        "Ca alternativă pentru corecția optică cu ochelari, Oftalmo Class deservește și pacienții purtători de lentile de contact, oferindu-le produse de la 3 mari producători mondiali: Alcon, Bausch & Lomb și Johnson & Johnson. Fie că e vorba de lentile de contact pentru miopii, hipermetropii, astigmatism sau prezbiopie, acestea sunt individualizate, de diametre și raze de curbură variabilă, toate având protecție UV și transmisibilitate bună a oxigenului pentru cornee.",
+        "Ele vin completate de soluții de întreținere și casete de păstrare pentru cea mai bună îngrijire a suprafeței oculare."
+      ]
+    }
+  },
+  "services": [
+    {
+      "title": "Consultații și diagnostic",
+      "text": "Evaluăm vederea în detaliu și punem un diagnostic clar, explicat pe înțelesul tău.",
+      "items": [
+        "Consultație oftalmologică completă",
+        "Refracție oculară și determinare dioptrii",
+        "Keratometrie și biomicroscopie",
+        "Oftalmoscopie directă și indirectă",
+        "Tonometrie oculară și gonioscopie",
+        "Pahimetrie și cicloplegie",
+        "Teste lacrimale Schirmer și fluoresceină",
+        "Testare ortoptică și cromatică"
+      ]
+    },
+    {
+      "title": "Investigații imagistice",
+      "text": "Documentăm fiecare structură a ochiului, ca să putem urmări evoluția în timp.",
+      "items": [
+        "Tomografie în coerență optică (OCT)",
+        "Angiografie OCT",
+        "Examen de câmp vizual computerizat",
+        "Fotografie de pol anterior și posterior",
+        "Ecografie oculară și biometrie",
+        "Verificarea permeabilității căilor lacrimale",
+        "Recoltare secreție conjunctivală"
+      ]
+    },
+    {
+      "title": "Tratamente și mici intervenții",
+      "text": "Rezolvăm în clinică afecțiunile care nu au nevoie de sală de operație.",
+      "items": [
+        "Injecții intravitreene anti-VEGF și triamcinolon",
+        "Laser YAG: capsulotomie, iridotomie, vitrioliză",
+        "Tratament Blephasteam pentru ochi uscat",
+        "Blefaroplastie și excizii chirurgicale",
+        "Tratament șalazion și orjelet",
+        "Corecție trichiazis, ectropion și entropion",
+        "Extracție corpi străini corneeni",
+        "Dezobstrucția căilor lacrimale"
+      ]
+    },
+    {
+      "title": "Optică medicală",
+      "text": "Ramele și lentilele se aleg după măsurători reale, nu după aproximări.",
+      "items": [
+        "Rame de vedere premium și ochelari de soare polarizați",
+        "Lentile monofocale, bifocale și progresive",
+        "Tratamente speciale pentru lentile",
+        "Adaptare lentile de contact",
+        "Alcon, Bausch & Lomb, Johnson & Johnson",
+        "Reparații rame: pernițe, șuruburi, reglaje"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "title": "Rame ochelari",
+      "text": "Satisfacem nevoile oferind o gamă largă de modele. Alege rame cu contur întreg, fir, capse sau clip-on."
+    },
+    {
+      "title": "Lentile",
+      "text": "Oferim lentile indiferent de necesitate, dispunând de lentile monofocale, bifocale și lentile progresive."
+    },
+    {
+      "title": "Ochelari de soare polarizați",
+      "text": "Modele Polaroid, Reserve și Laura Ashley, cu lentile polarizate pentru confort la volan și în aer liber."
+    },
+    {
+      "title": "Lentile de contact",
+      "text": "Acuvue Johnson & Johnson, Cooper Vision, Bausch & Lomb și Air Optix Alcon, adaptate după măsurători."
+    }
+  ],
+  "brands": [
+    "Hugo Boss",
+    "Jimmy Choo",
+    "Max Mara",
+    "Charmant",
+    "Montblanc",
+    "Marimekko",
+    "Fossil",
+    "Pepe Jeans",
+    "Ted Baker",
+    "Christian Lacroix"
+  ],
+  "equipment": [
+    {
+      "name": "OCT și Angio-OCT Optopol RevoNX",
+      "text": "Scanare de mare rezoluție a retinei și a nervului optic, cu hartă vasculară obținută fără substanță de contrast."
+    },
+    {
+      "name": "Câmp vizual Optopol PTS 2000",
+      "text": "Perimetrie computerizată folosită în monitorizarea glaucomului și a afecțiunilor neurologice."
+    },
+    {
+      "name": "Laser YAG ELLEX",
+      "text": "Intervenții laser rapide, fără incizie, pentru capsulotomie, iridotomie și vitrioliză."
+    },
+    {
+      "name": "Autokeratorefractometru Topcon KR-800A"
+    },
+    {
+      "name": "Biomicroscop digital Topcon SL-D4"
+    },
+    {
+      "name": "Aplanotonometru Goldmann"
+    },
+    {
+      "name": "Cameră foto-video digitală Topcon DV3"
+    },
+    {
+      "name": "Blephasteam Théa Laboratoires"
+    },
+    {
+      "name": "Ecograf și biometru VuPad"
+    },
+    {
+      "name": "Autorefractometru pediatric"
+    },
+    {
+      "name": "Oftalmoscop indirect Heine Omega 600"
+    },
+    {
+      "name": "Platformă integrată biomicroscop cu cameră"
+    }
+  ],
+  "team": {
+    "doctors": [
+      {
+        "name": "Dr. Bodea Flaviu",
+        "role": "Medic specialist oftalmolog, fondator",
+        "bio": "Rezidențiat în oftalmologie între 2014 și 2017, cursuri avansate de chirurgia cataractei, OCT și laser, formare în chirurgie vitreo-retiniană. Asistent universitar la Disciplina de Oftalmologie a Facultății de Medicină și Farmacie din Oradea și lector la congrese ESCRS, EURETINA și ASCRS.",
+        "tags": [
+          "Cataractă",
+          "Retină",
+          "Laser"
+        ],
+        "cv": [
+          {
+            "heading": "Formarea profesională",
+            "items": [
+              "2007-2013 Universitatea de Medicină și Farmacie “Iuliu Hațieganu” Cluj-Napoca, Facultatea de Medicină",
+              "2014-2017 Rezidențiat în Oftalmologie Cluj-Napoca și Oradea",
+              "2016 Wetlab Chirurgia Cataractei Basic, Sofia, Bulgaria",
+              "2016 Congresul Sociețății Europene de Cataractă și Chirurgie Refractivă, Copenhaga",
+              "2017 Wetlab Chirurgia Cataractei Avansat, Sofia, Bulgaria",
+              "2017 Curs OCT Timisoara",
+              "2018 Curs Laser Oftalmologie Basic, Timișoara",
+              "2018 Curs Laser Oftalmologie Avansați, Timișoara",
+              "2018 Medic specialist oftalmologie – Spitalul Clinic Județean de Urgență Oradea",
+              "2018 Asistent Universitar, Facultatea De Medicină Oradea – Departament Oftalmologie",
+              "2018 Școala de chirurgie vitreo-retiniană TVRS Thessaloniki, Grecia",
+              "2019 Formare chirurgie vitreo-retiniană București",
+              "2019 Congresul Societății Europene de Retină – EURETINA, Paris",
+              "2019 Congresul Societății Române de Oftalmologie Sinaia – Speaker",
+              "2020 Congresul Sociețății Române de Glaucom – Speaker",
+              "2022 – Congresul European de Glaucom, Atena, Grecia",
+              "2022 - Congresul Societății Europene de Retină – EURETINA, Hamburg, Germania",
+              "2022 – Congresul European de Cataractă și Chirurgie Refractivă – ESCRS, Milano, Italia",
+              "2022 - Congresul Societății Române de Oftalmologie Sinaia – Speaker",
+              "2022 – Coordonator workshop “Aspecte teoretice și practice ale administrării intravitreene a medicamentelor anti-VEGF” – Oradea",
+              "2023 – Congresul Roman de Glaucom – Brașov, România",
+              "2023 – ASCRS – Congresul Societății Americane de Cataractă și Chirurgie Refractivă – San Diego, SUA",
+              "2023 – Congresul Mondial de Glaucom – Roma, Italia",
+              "2023 – Congresul European de Cataractă și Chirurgie Refractivă ESCRS – Viena, Austria",
+              "2023 – Congresul Societății Europene de Retină – Amsterdam, Olanda",
+              "2023 – Curs chirurgie vitreo-retiniană, ESASO (European School For Advanced Studies in Ophthalmology) – Lugano, Elveția"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dr. Haidu Sorin",
+        "role": "Medic specialist oftalmolog",
+        "bio": "Absolvent de medicină în 2018 și rezidențiat în oftalmologie finalizat în 2022, doctorand din 2019. Stagii de pregătire la Paris în retină medicală, la București în chirurgie oculoplastică și la Ankara în chirurgia avansată de segment anterior. Autor de lucrări despre suturile corneene, tumorile palpebrale și glaucom.",
+        "tags": [
+          "Glaucom",
+          "Oculoplastie",
+          "Segment anterior"
+        ],
+        "cv": [
+          {
+            "heading": "Formarea profesională",
+            "items": [
+              "Absolvent al Universității din Oradea, Facultatea de Medicină și Farmacie, Specializarea Medicină Generală promoția 2012 – 2018",
+              "Absolvent al rezidențiatului în specialitatea Oftalmologie, promoția 2018 – 2022",
+              "Student doctorand al Școlii Doctorale a Universității din Oradea din 2019"
+            ]
+          },
+          {
+            "heading": "Experiența profesională",
+            "items": [
+              "Medic Rezident Spitalul Clinic Județean de Urgență din Oradea (2018 – 2022)",
+              "Stagiu de pregătire – Hopital Intercommunal de Creteil, Paris, Franța (2020) – retina medicală",
+              "Stagiu de pregătire – Spitalul Clinic de Urgențe Oftalmologice, București (2021) – chirurgie oculoplastică",
+              "Stagiu de pregătire – Medicana International Hospital, Ankara, Turcia (2022) – tehnici avansate chirurgicale ale segmentului anterior în glaucomul congenital și al adultului"
+            ]
+          },
+          {
+            "heading": "Cursuri",
+            "items": [
+              "Actualități și principii de tratament laser în fotocoagularea retiniană, Timișoara (2019)",
+              "Principii avansate de tratament laser în bolile oculare, Timișoara (2019)",
+              "Curs strabologie, Cluj-Napoca (2019)",
+              "Curs postuniversitar - Imagistică retiniană și tratamente maculare, Universitatea Paris Est (XII), 2020-2021",
+              "Principii de interpretare și actualități în tehnologiile imagistice retiniene – tomografie în coerență optică și angiofluorografie"
+            ]
+          },
+          {
+            "heading": "Congrese",
+            "items": [
+              "Congresul Societății Române de Glaucom - Brașov, 17-19/ 11/ 2022",
+              "Congresul Clubului Regal al Medicilor - 15 / 10 / 2022",
+              "Al 40-lea Congres al ESCRS - Milano, 16-20 / 09/ 2022",
+              "Al XI-lea Congres Internațional de Chirurgie a Glaucomului - Geneve, 21-23 / 04/ 2022",
+              "Reuniunea Anuală a României de Suprafață Oculară și Lentile de Contact - Sibiu, 26-28 / 11/ 2021",
+              "Congresul Clubului Regal al Medicilor - 16/10/2021",
+              "Al XIX-lea Congres al Societății Române de Oftalmologie - București, 14-17 / 10/ 2021",
+              "Al VII-lea Congres al Societății Române de Cataractă și Chirurgie Refractivă (Întâlnire Virtuală) - Eforie Nord, 18-20 / 06/ 2021",
+              "Al IX-lea Congres al Societății Române de Strabologie și Oftalmo-pediatrie (Întâlnirea Hibridă) - Brașov, 04-06 / 06/ 2021",
+              "Congresul Euretina (Întâlnire virtuală) - 02-04 / 10/ 2021",
+              "Al 126-lea Congres al Societății Franceze de Oftalmologie (prima întâlnire virtuală) - Paris, 05-06 / 09/ 2021",
+              "Congresul Societății Române de Glaucom - Brașov, 11-14 / 03/ 2020",
+              "Al XVIII-lea Congres al Societății Române de Oftalmologie - Sinaia, 2-5 / 10/ 2019",
+              "Al XXXVII-lea Congres al Societății Europene de Cataractă și Chirurgie Refractivă - Paris, 14-18 / 09/ 2019",
+              "Al VI-lea Congres al Societății Române de Cataractă și Chirurgie Refractivă - Eforie Nord, 13-16/06/2019",
+              "Al 125-lea Congres al Societății Franceze de Oftalmologie - Paris, 11-14 / 05/ 2019",
+              "Congresul AOP (Ateliers d`Ophtalmologie Pratique) - Paris, 14-15 / 12/ 2018",
+              "Congresul AOP (Ateliers d`Ophtalmologie Pratique) - Paris, 08-09 / 12/ 2016",
+              "Al XXXIII-lea Congres al Societății Europene de Cataractă și Chirurgie Refractivă - Barcelone, 05-09 / 09/ 2015",
+              "Al XIII-lea Congres al Societății Române de Oftalmologie - București, 1-4 / 10/ 2014"
+            ]
+          },
+          {
+            "heading": "Publicații",
+            "items": [
+              "Sindromul congenital tarsal Kink: revizuire literatură și raport de caz, copii, 1 ianuarie 2022",
+              "Trabeculotomie transluminală asistată de gonioscopie pentru glaucomul congenital secundar sindromului Klippel-Trenaunay-Weber: Raport de caz, American Journal of Ophthalmology – Case Reports, 21 octombrie 2022"
+            ]
+          },
+          {
+            "heading": "Lucrări științifice prezentate",
+            "items": [
+              "Primele rezultate ale unui studiu privind dezvoltarea cataractei la profesioniștii din domeniul sănătății expuși la radiații ionizante – 2019",
+              "Capcană de diagnosticare – 2021",
+              "Primii pași în suturile corneene - 2021",
+              "Tumori rare ale pleoapelor - 2021",
+              "Tumori conjunctivale pigmentate. Ce să fac? - 2021",
+              "Chirurgie oculoplastică și lentile de contact terapeutice - 2021"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dr. Boros Krisztina",
+        "role": "Medic specialist oftalmolog",
+        "bio": "Consultații generale de oftalmologie pentru adulți și copii, cu accent pe depistarea precoce a viciilor de refracție și pe monitorizarea afecțiunilor cronice.",
+        "tags": [
+          "Consultații",
+          "Pediatrie",
+          "Refracție"
+        ],
+        "cv": null
+      }
+    ],
+    "staff": [
+      {
+        "name": "Asist. Orbai Andreea",
+        "role": "Asistent medical",
+        "cv": null
+      },
+      {
+        "name": "Opt. Bodea Ionel",
+        "role": "Tehnician optometrist",
+        "cv": null
+      },
+      {
+        "name": "Opt. Pălcuț Aneta",
+        "role": "Tehnician optometrist",
+        "cv": null
+      },
+      {
+        "name": "Asist. Cârgea Teodora",
+        "role": "Front office, tehnician",
+        "cv": [
+          {
+            "heading": "Formarea profesională",
+            "items": [
+              "2004 - 2008 Facultatea de Istorie, Geografie și Relații Internaționale Oradea, Specializarea Relații Internaționale și Studii Europene",
+              "2009 Licență în Relații Internaționale și Studii Europene- SNSPA București",
+              "2020 Curs de instruire online privind lentilele ItalLenti",
+              "2019 Curs de instruire online privind lentilele Hoya"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cârgea Anca",
+        "role": "Registrator medical",
+        "cv": null
+      },
+      {
+        "name": "Plisco Carmen",
+        "role": "Registrator medical",
+        "cv": null
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Daniel Bondaș",
+      "text": "Servire promptă, medic deschis la minte și orientat către pacient. Servicii de calitate și un personal foarte prietenos."
+    },
+    {
+      "name": "Monica Turenschi",
+      "text": "Ambianță plăcută, personal cordial, explicații clare și aparatură profesională. Exact ce cauți la o clinică."
+    },
+    {
+      "name": "Alexandra Guiaș",
+      "text": "Recomand echipa pentru profesionalism, atenție la detalii și pentru calitatea tratamentului primit."
+    },
+    {
+      "name": "Daniel Satmari",
+      "text": "Profesionalism, aparatură de ultimă generație și un medic răbdător, care explică fiecare pas al consultației."
+    },
+    {
+      "name": "Ioana Cociuba",
+      "text": "Servicii de calitate, ochelari perfecți și un medic respectuos și foarte profesionist."
+    }
+  ],
+  "faq": [
+    {
+      "q": "La ce vârstă ar trebui să vin cu copilul la primul consult?",
+      "a": "Dacă nu se observă nimic neobișnuit la ochii copilului, primul consult ar trebui făcut în jurul vârstei de 2,5 până la 3 ani. Vino mai devreme dacă observi ochii care fug în poziții anormale, micșorări, poziționări anormale ale capului, lăcrimări, secreții purulente sau ticuri. O verificare înainte de începerea școlii este întotdeauna recomandată."
+    },
+    {
+      "q": "Dacă lucrez mult la calculator, îmi stric vederea?",
+      "a": "Privitul la ecrane LED nu deteriorează permanent vederea, dar poate cauza oboseală oculară, evoluția miopiei și sindrom de ochi uscat. Expunerea continuă la excesul de lumină albastră emisă de ecrane are un rol demonstrat în degradarea prematură a fotoreceptorilor retinieni. Recomandăm pauze regulate și ochelari cu filtru de protecție."
+    },
+    {
+      "q": "Câte ore pe zi ar trebui petrecute maxim în fața ecranelor?",
+      "a": "Limitele recomandate sunt de 30 de minute pe zi pentru preșcolari, o oră pentru copiii de 7 până la 10 ani, două ore între 10 și 14 ani, trei ore între 14 și 18 ani și patru ore pentru adulți. Peste 8 ore de expunere zilnică devin obligatorii pauzele și ochelarii de protecție."
+    },
+    {
+      "q": "Ce sunt exercițiile oculare și la ce ajută?",
+      "a": "Cel mai frecvent este vorba despre urmărirea unui obiect în toate cele 9 direcții fundamentale ale câmpului vizual și despre alternarea focalizării la distanță, intermediar și aproape. Ele mențin tonusul musculaturii oculare și oferă relaxare."
+    },
+    {
+      "q": "Ce este presbiopia și cum o recunoaștem?",
+      "a": "Presbiopia este o stare fiziologică a ochiului care debutează în jurul vârstei de 38 până la 40 de ani și se traduce prin nevoia de ochelari de aproape. Cristalinul pierde din elasticitate și nu mai reușește să focalizeze obiectele apropiate."
+    },
+    {
+      "q": "Mă voi putea acomoda cu ochelarii progresivi?",
+      "a": "Tehnologia actuală permite acomodări mult mai bune decât în trecut. Măsurăm parametrii specifici ai ochilor și ai ramei, iar lentilele se produc optimizat pentru tine. Producătorii oferă garanție de acomodare și livrează două seturi gratuite în cazul în care nu te obișnuiești."
+    },
+    {
+      "q": "Mi s-a înroșit ochiul de ceva timp, ce poate fi?",
+      "a": "Cauzele pot fi hemoragia subconjunctivală, iritația, conjunctivitele infecțioase sau alergice, uveitele, glaucomul acut sau keratitele. Fiind afecțiuni care se tratează diferit, se impune adresarea cât mai urgentă la medicul oftalmolog."
+    },
+    {
+      "q": "Este contraindicată nașterea naturală la persoanele miope?",
+      "a": "Studiile recente arată că nu este contraindicată. Un ochi miop este de cele mai multe ori și un ochi alungit, așa că există un anumit grad de tracțiune a retinei, motiv pentru care este necesară o consultație oftalmologică prealabilă."
+    },
+    {
+      "q": "Este dureroasă operația de cataractă?",
+      "a": "În mod normal operația de cataractă nu este dureroasă, anestezia utilizată fiind cea locală, prin injecție lângă ochi, sau topică, cu picături. Instrumentele și inciziile folosite în prezent sunt mult mai mici decât acum câțiva ani."
+    },
+    {
+      "q": "Când este durerea de cap de cauză oculară?",
+      "a": "Durerea poate proveni din dioptrii necorectate, ochelari inadecvați, glaucom sau inflamații intraoculare. Localizarea frontală, temporală sau în spatele ochilor indică de obicei o origine oculară, spre deosebire de durerea de cauză cervicală."
+    },
+    {
+      "q": "Cum tratăm retinopatia diabetică?",
+      "a": "Controlul glicemiei este esențial. Tratamentele includ medicație vasculară, fotocoagulare laser, laser micropulsat pentru edemul macular sau injecții anti-VEGF. Controalele oftalmologice regulate sunt obligatorii."
+    },
+    {
+      "q": "Ce facem când avem un corp străin corneean?",
+      "a": "Nu încerca să îndepărtezi singur un șpan, pentru că fiind fierbinte în momentul în care se fixează de cornee are o aderență foarte crescută. Extracția trebuie făcută de medicul oftalmolog, în condiții sterile."
+    },
+    {
+      "q": "Cum gestionăm lăcrimarea excesivă sau senzația de ochi uscat?",
+      "a": "Sindromul de ochi uscat cuprinde nu doar uscăciunea oculară, ci și lăcrimările excesive fără motiv obiectiv. Testul Schirmer și analiza glandelor Meibomius stabilesc tratamentul personalizat, iar terapia Blephasteam aduce ameliorare prin căldură umedă."
+    },
+    {
+      "q": "Ce investigații pot face la OftalmoClass?",
+      "a": "Măsurarea dioptriilor, tensiunea intraoculară, documentarea foto-video, examenul de câmp vizual, OCT, angio-OCT, ecografia oculară, biometria și ultrabiomicroscopia."
+    }
+  ],
+  "articleTopics": [
+    "Imagistica oculară. Ce este OCT-ul",
+    "Operația de cataractă, de la diagnostic la controlul postoperator",
+    "Am glaucom, ce opțiuni am pe lângă picături",
+    "Degenerescența maculară și terapiile de top",
+    "Opțiuni de corectare a miopiei, chirurgie sau nu",
+    "Laserele în oftalmologie",
+    "Cum scăpăm de lăcrimarea în exces sau înțepăturile oculare",
+    "Ochelari progresivi sau mai bine separat",
+    "Blefaroplastia și frumusețea pleoapelor"
+  ]
+}

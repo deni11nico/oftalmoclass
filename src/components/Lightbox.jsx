@@ -62,7 +62,7 @@ export default function Lightbox({ photos, index, onClose, onChange }) {
           type="button"
           onClick={() => go(-1)}
           aria-label="Fotografia anterioară"
-          className="flex size-12 items-center justify-center rounded-full bg-white/12 text-white transition-colors hover:bg-lime hover:text-ink"
+          className="flex size-12 items-center justify-center rounded-full bg-white/12 text-white transition-colors hover:bg-white hover:text-forest"
         >
           <CaretLeft size={20} weight="bold" />
         </button>
@@ -73,7 +73,7 @@ export default function Lightbox({ photos, index, onClose, onChange }) {
           type="button"
           onClick={() => go(1)}
           aria-label="Fotografia următoare"
-          className="flex size-12 items-center justify-center rounded-full bg-white/12 text-white transition-colors hover:bg-lime hover:text-ink"
+          className="flex size-12 items-center justify-center rounded-full bg-white/12 text-white transition-colors hover:bg-white hover:text-forest"
         >
           <CaretRight size={20} weight="bold" />
         </button>

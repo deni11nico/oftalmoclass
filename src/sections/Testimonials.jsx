@@ -37,7 +37,7 @@ export default function Testimonials() {
               <Quotes
                 size={32}
                 weight="fill"
-                className={index === 0 ? 'text-lime' : 'text-stone'}
+                className={index === 0 ? 'text-lime-bright' : 'text-sage'}
               />
               <blockquote
                 className={`mt-6 text-base leading-relaxed ${
@@ -47,7 +47,7 @@ export default function Testimonials() {
                 {item.text}
               </blockquote>
               <figcaption
-                className={`mt-7 text-sm font-bold ${index === 0 ? 'text-lime' : 'text-ink'}`}
+                className={`mt-7 text-sm font-bold ${index === 0 ? 'text-lime-bright' : 'text-forest'}`}
               >
                 {item.name}
               </figcaption>

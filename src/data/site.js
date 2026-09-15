@@ -1,4 +1,4 @@
-import { withBase } from './asset'
+import { withBase } from './asset.js'
 
 export const clinic = {
   name: 'OftalmoClass',

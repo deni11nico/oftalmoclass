@@ -1,7 +1,9 @@
 // Public assets live in /public and are referenced by absolute path.
 // On GitHub Pages the site is served from a sub-folder, so every one of those
 // paths needs the Vite base prefix. In dev the base is "/" and this is a no-op.
-const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+// `import.meta.env` is undefined when this module is loaded by plain Node
+// (the chatbot knowledge generator does that), so fall back to "/".
+const BASE = (import.meta.env?.BASE_URL ?? '/').replace(/\/$/, '')
 
 export const asset = (path) => `${BASE}${path}`
 

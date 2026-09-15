@@ -67,7 +67,7 @@ export default function CareerModal({ person, sections, onClose }) {
               <ul className="mt-4 grid gap-2.5">
                 {section.items.map((item) => (
                   <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
-                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-lime" />
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
                     {item}
                   </li>
                 ))}

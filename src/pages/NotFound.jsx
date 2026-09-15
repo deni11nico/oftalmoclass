@@ -15,7 +15,7 @@ export default function NotFound() {
         </p>
         <Link
           to={routes.home}
-          className="mt-9 inline-flex items-center gap-2 rounded-full bg-lime px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-lime-bright"
+          className="mt-9 inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold bg-primary text-white transition-colors hover:bg-primary-dark"
         >
           <ArrowLeft size={18} weight="bold" />
           Înapoi acasă

@@ -3,20 +3,29 @@
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #071d17;
-  --color-forest: #0f342a;
-  --color-moss: #1b4c3d;
-  --color-sage: #3f6f5e;
+  /* text and deep accents: soft teal-slate instead of near-black */
+  --color-ink: #1f3a38;
+  --color-forest: #2d6f66;
+  --color-moss: #3f8a7e;
+  --color-sage: #9cc5b6;
 
-  --color-lime: #c6f16b;
-  --color-lime-bright: #d6f98c;
-  --color-lime-soft: #e9fbc6;
-  --color-lime-mist: #f4fde4;
+  /* primary action colour: calm teal, white text on top */
+  --color-primary: #2f8f83;
+  --color-primary-dark: #26776d;
 
-  --color-cream: #ffffff;
-  --color-mist: #f3f7f0;
-  --color-stone: #e7eee3;
-  --color-muted: #5f7169;
+  /* soft mint accents for icon circles and small highlights */
+  --color-lime: #cfeadb;
+  --color-lime-bright: #dff3e8;
+  --color-lime-soft: #e6f4ec;
+  --color-lime-mist: #f0f8f3;
+
+  /* surfaces: warm white, light sage, light sky */
+  --color-cream: #fbfbf8;
+  --color-mist: #f1f6f3;
+  --color-stone: #e2ece7;
+  --color-sky: #e8f2f7;
+  --color-sky-deep: #d6e8f0;
+  --color-muted: #5d716c;
 }
 
 @layer base {
@@ -36,6 +45,15 @@
     background-color: var(--color-lime);
     color: var(--color-ink);
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
@@ -44,5 +62,39 @@
     max-width: 78rem;
     margin-inline: auto;
     padding-inline: 1.25rem;
+  }
+
+  /* soft elevated card used across the site */
+  .card-soft {
+    box-shadow: 0 1px 2px rgba(31, 58, 56, 0.04), 0 12px 32px -20px rgba(31, 58, 56, 0.25);
+  }
+
+  /* light panel with a gentle sky-to-sage gradient (hero, page headers) */
+  .panel-light {
+    background-image: linear-gradient(135deg, var(--color-sky) 0%, var(--color-mist) 55%, var(--color-lime-mist) 100%);
+  }
+}
+
+@keyframes chat-pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes chat-dot {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
   }
 }

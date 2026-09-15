@@ -1,0 +1,13 @@
+name = "oftalmoclass-chat"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Origins allowed to call this Worker (comma-separated). Add localhost for local dev.
+ALLOWED_ORIGINS = "https://deni11nico.github.io,http://localhost:5190,http://localhost:5173"
+# Claude model used for replies. claude-sonnet-5 is a cheaper alternative.
+CLAUDE_MODEL = "claude-opus-5"
+
+# Secrets are NOT stored here. Set them with:
+#   npx wrangler secret put ANTHROPIC_API_KEY

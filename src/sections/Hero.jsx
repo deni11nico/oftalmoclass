@@ -15,11 +15,11 @@ function InfoCard({ title, text, items }) {
   const entries = items ?? [{ title, text }]
 
   return (
-    <div className="flex h-full flex-col justify-center gap-5 rounded-3xl bg-ink/70 p-6 backdrop-blur-md sm:p-7">
+    <div className="card-soft flex h-full flex-col justify-center gap-5 rounded-3xl bg-white/85 p-6 backdrop-blur-md sm:p-7">
       {entries.map((entry) => (
         <div key={entry.title}>
-          <h2 className="text-lg font-bold text-lime">{entry.title}</h2>
-          <p className="mt-2.5 text-sm leading-relaxed text-white/65">{entry.text}</p>
+          <h2 className="text-lg font-bold text-forest">{entry.title}</h2>
+          <p className="mt-2.5 text-sm leading-relaxed text-muted">{entry.text}</p>
         </div>
       ))}
     </div>
@@ -28,34 +28,37 @@ function InfoCard({ title, text, items }) {
 
 function PhotoCard({ src, alt }) {
   return (
-    <div className="overflow-hidden rounded-3xl">
+    <div className="card-soft overflow-hidden rounded-3xl">
       <img src={src} alt={alt} className="h-full min-h-44 w-full object-cover" loading="eager" />
     </div>
   )
 }
 
+const social = 'flex size-9 items-center justify-center rounded-full bg-white text-forest transition-colors hover:bg-primary hover:text-white'
+
 export default function Hero() {
   return (
     <section className="px-2 sm:px-4">
-      <div className="relative isolate overflow-hidden rounded-[2rem] bg-ink sm:rounded-[2.75rem]">
+      <div className="panel-light relative isolate overflow-hidden rounded-[2rem] sm:rounded-[2.75rem]">
+        {/* very faint photo texture on the right so the panel is not flat */}
         <img
           src={images.heroBackdrop}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-y-0 right-0 hidden w-2/3 object-cover opacity-[0.12] mix-blend-multiply lg:block"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-ink/95 via-forest/90 to-moss/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-sky via-sky/60 to-transparent" />
 
         <div className="relative shell pt-12 pb-12 sm:pt-14 sm:pb-14 lg:pt-16 lg:pb-16">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10">
             <div>
-              <h1 className="text-3xl leading-[1.1] font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                Îngrijire <span className="text-lime">oftalmologică</span> pentru
-                <br className="hidden sm:block" /> fiecare <span className="text-lime">membru</span>{' '}
+              <h1 className="text-3xl leading-[1.1] font-extrabold tracking-tight text-ink sm:text-4xl lg:text-5xl">
+                Îngrijire <span className="text-primary">oftalmologică</span> pentru
+                <br className="hidden sm:block" /> fiecare <span className="text-primary">membru</span>{' '}
                 al familiei
               </h1>
 
-              <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-white/70 sm:text-base">
+              <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-muted sm:text-base">
                 La OftalmoClass se practică medicina bazată pe dovezi. Am pornit clinica din dorința
                 de a aduce în Oradea standarde occidentale în oftalmologie și îngrijire plină de
                 compasiune, de la primul consult până la controlul de rutină.
@@ -71,25 +74,25 @@ export default function Hero() {
                 </Button>
               </div>
 
-              <div className="mt-8 grid gap-3 text-sm text-white/70">
+              <div className="mt-8 grid gap-3 text-sm text-ink/80">
                 <div className="flex flex-wrap gap-x-8 gap-y-3">
                   <span className="inline-flex items-center gap-2">
-                    <MapPin size={18} weight="fill" className="shrink-0 text-lime" />
+                    <MapPin size={18} weight="fill" className="shrink-0 text-primary" />
                     {clinic.address}
                   </span>
                   <span className="inline-flex items-center gap-2">
-                    <Clock size={18} weight="fill" className="shrink-0 text-lime" />
+                    <Clock size={18} weight="fill" className="shrink-0 text-primary" />
                     {clinic.hours}
                   </span>
                 </div>
-                <div className="flex flex-wrap gap-x-8 gap-y-3">
+                <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
                   {clinic.phones.map((phone) => (
                     <a
                       key={phone}
                       href={`tel:${phone.replace(/\s/g, '')}`}
-                      className="inline-flex items-center gap-2 transition-colors hover:text-lime"
+                      className="inline-flex items-center gap-2 font-medium transition-colors hover:text-primary"
                     >
-                      <Phone size={18} weight="fill" className="shrink-0 text-lime" />
+                      <Phone size={18} weight="fill" className="shrink-0 text-primary" />
                       {phone}
                     </a>
                   ))}
@@ -100,7 +103,7 @@ export default function Hero() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Facebook"
-                      className="flex size-9 items-center justify-center rounded-full bg-white/12 text-white transition-colors hover:bg-lime hover:text-ink"
+                      className={social}
                     >
                       <FacebookLogo size={18} weight="fill" />
                     </a>
@@ -109,7 +112,7 @@ export default function Hero() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Instagram"
-                      className="flex size-9 items-center justify-center rounded-full bg-white/12 text-white transition-colors hover:bg-lime hover:text-ink"
+                      className={social}
                     >
                       <InstagramLogo size={18} weight="fill" />
                     </a>

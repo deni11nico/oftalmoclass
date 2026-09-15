@@ -22,7 +22,7 @@ export default function FaqList() {
                   <span className="text-base font-bold text-ink sm:text-lg">{item.q}</span>
                   <span
                     className={`flex size-9 shrink-0 items-center justify-center rounded-full transition-colors ${
-                      expanded ? 'bg-lime text-ink' : 'bg-white text-moss'
+                      expanded ? 'bg-primary text-white' : 'bg-white text-moss'
                     }`}
                   >
                     {expanded ? <Minus size={16} weight="bold" /> : <Plus size={16} weight="bold" />}

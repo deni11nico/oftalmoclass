@@ -5,13 +5,13 @@ import { clinic, routes } from '../data/site'
 export default function CtaBand() {
   return (
     <section className="px-2 pb-4 sm:px-4">
-      <div className="rounded-[2rem] bg-ink px-8 py-14 sm:rounded-[2.75rem] sm:px-10 lg:py-16">
+      <div className="panel-light rounded-[2rem] px-8 py-14 sm:rounded-[2.75rem] sm:px-10 lg:py-16">
         <div className="shell flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div>
-            <h2 className="max-w-xl text-2xl leading-tight font-extrabold text-white italic sm:text-3xl">
+            <h2 className="max-w-xl text-2xl leading-tight font-extrabold text-ink italic sm:text-3xl">
               Nu mai aștepta, fă o programare chiar acum
             </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/65">
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted">
               {clinic.address}. {clinic.hours}.
             </p>
           </div>
@@ -20,7 +20,7 @@ export default function CtaBand() {
             <div className="flex flex-wrap gap-3 lg:justify-center">
               <Link
                 to={routes.contact}
-                className="inline-flex items-center gap-2 rounded-full bg-lime px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-lime-bright"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold bg-primary text-white transition-colors hover:bg-primary-dark"
               >
                 Fă o programare
                 <ArrowRight size={18} weight="bold" />
@@ -29,7 +29,7 @@ export default function CtaBand() {
                 <a
                   key={phone}
                   href={`tel:${phone.replace(/\s/g, '')}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-white/12 px-6 py-3.5 text-sm font-semibold whitespace-nowrap text-white backdrop-blur-md transition-colors hover:bg-white/20"
+                  className="card-soft inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold whitespace-nowrap text-forest transition-colors hover:bg-lime-soft"
                 >
                   <Phone size={18} weight="fill" />
                   {phone}
@@ -43,7 +43,7 @@ export default function CtaBand() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="flex size-12 items-center justify-center rounded-full bg-white/12 text-white backdrop-blur-md transition-colors hover:bg-lime hover:text-ink"
+                className="card-soft flex size-12 items-center justify-center rounded-full bg-white text-forest transition-colors hover:bg-primary hover:text-white"
               >
                 <FacebookLogo size={22} weight="fill" />
               </a>
@@ -52,7 +52,7 @@ export default function CtaBand() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex size-12 items-center justify-center rounded-full bg-white/12 text-white backdrop-blur-md transition-colors hover:bg-lime hover:text-ink"
+                className="card-soft flex size-12 items-center justify-center rounded-full bg-white text-forest transition-colors hover:bg-primary hover:text-white"
               >
                 <InstagramLogo size={22} weight="fill" />
               </a>

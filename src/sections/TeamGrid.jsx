@@ -9,7 +9,7 @@ function CareerButton({ onClick, className = '' }) {
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-full bg-lime font-semibold text-ink transition-colors hover:bg-lime-bright ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-full bg-primary font-semibold text-white transition-colors hover:bg-primary-dark ${className}`}
     >
       Carieră
       <ArrowUpRight size={16} weight="bold" />

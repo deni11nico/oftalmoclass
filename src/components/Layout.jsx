@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import CtaBand from '../sections/CtaBand'
+import ChatWidget from './ChatWidget'
 import { routes } from '../data/site'
 
 function ScrollToTop() {
@@ -27,6 +28,7 @@ export default function Layout() {
         {pathname === routes.contact ? null : <CtaBand />}
       </main>
       <Footer />
+      <ChatWidget />
     </>
   )
 }

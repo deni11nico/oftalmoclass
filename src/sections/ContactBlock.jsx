@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   CheckCircle,
   Clock,
@@ -7,10 +7,18 @@ import {
   MapPin,
   PaperPlaneTilt,
   Phone,
+  Sparkle,
 } from '@phosphor-icons/react'
 import { clinic } from '../data/site'
+import { PREFILL_EVENT, takePrefill } from '../lib/prefill'
 
 const mapQuery = encodeURIComponent(`${clinic.address}, România`)
+
+// Optional: when a Web3Forms access key is configured the form really sends.
+// Without it the form keeps its original behaviour (local confirmation only).
+const WEB3FORMS_KEY = (import.meta.env.VITE_WEB3FORMS_KEY ?? '').trim()
+
+const EMPTY = { name: '', email: '', phone: '', date: '', message: '' }
 
 const field =
   'w-full rounded-2xl bg-mist px-5 py-3.5 text-sm text-ink placeholder:text-muted/70 outline-none transition-colors focus:bg-stone'
@@ -18,7 +26,7 @@ const field =
 function Detail({ icon: Icon, label, children }) {
   return (
     <div className="flex items-center gap-4 rounded-[1.5rem] bg-mist p-5">
-      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-lime text-ink">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-lime text-forest">
         <Icon size={20} weight="fill" />
       </span>
       <div>
@@ -30,7 +38,71 @@ function Detail({ icon: Icon, label, children }) {
 }
 
 export default function ContactBlock() {
-  const [sent, setSent] = useState(false)
+  // Data handed over by the chatbot, if we arrived here from it.
+  const [initialPrefill] = useState(() => takePrefill())
+  const [values, setValues] = useState(() => ({ ...EMPTY, ...(initialPrefill ?? {}) }))
+  const [prefilled, setPrefilled] = useState(Boolean(initialPrefill))
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [errorText, setErrorText] = useState('')
+  const formRef = useRef(null)
+
+  // The chatbot may also hand over data while this page is already open.
+  useEffect(() => {
+    const apply = (event) => {
+      setValues((prev) => ({ ...prev, ...event.detail }))
+      setPrefilled(true)
+      setStatus('idle')
+      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+    window.addEventListener(PREFILL_EVENT, apply)
+    return () => window.removeEventListener(PREFILL_EVENT, apply)
+  }, [])
+
+  useEffect(() => {
+    if (initialPrefill) formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }, [initialPrefill])
+
+  const update = (key) => (event) => setValues((prev) => ({ ...prev, [key]: event.target.value }))
+
+  async function handleSubmit(event) {
+    event.preventDefault()
+    if (!WEB3FORMS_KEY) {
+      setStatus('sent')
+      return
+    }
+
+    setStatus('sending')
+    setErrorText('')
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `Cerere de programare: ${values.name}`,
+          from_name: 'Site OftalmoClass',
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          date: values.date,
+          message: values.message,
+          botcheck: '',
+        }),
+      })
+      const data = await response.json().catch(() => ({}))
+      if (!response.ok || data.success === false) throw new Error(data.message || 'Trimiterea a eșuat.')
+      setStatus('sent')
+    } catch (err) {
+      setStatus('error')
+      setErrorText(err.message || 'Trimiterea a eșuat. Vă rugăm să ne sunați.')
+    }
+  }
+
+  const resetForm = () => {
+    setValues(EMPTY)
+    setPrefilled(false)
+    setStatus('idle')
+  }
 
   return (
     <section className="py-14 lg:py-16">
@@ -61,7 +133,7 @@ export default function ContactBlock() {
                   href={`tel:${phone.replace(/\s/g, '')}`}
                   className="inline-flex items-center justify-center gap-2.5 rounded-[1.5rem] bg-forest px-5 py-4 text-base font-bold text-white transition-colors hover:bg-moss"
                 >
-                  <Phone size={18} weight="fill" className="shrink-0 text-lime" />
+                  <Phone size={18} weight="fill" className="shrink-0 text-lime-bright" />
                   {phone}
                 </a>
               ))}
@@ -73,7 +145,7 @@ export default function ContactBlock() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="flex size-12 items-center justify-center rounded-full bg-mist text-ink transition-colors hover:bg-lime"
+                className="flex size-12 items-center justify-center rounded-full bg-mist text-forest transition-colors hover:bg-primary hover:text-white"
               >
                 <FacebookLogo size={22} weight="fill" />
               </a>
@@ -82,17 +154,17 @@ export default function ContactBlock() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex size-12 items-center justify-center rounded-full bg-mist text-ink transition-colors hover:bg-lime"
+                className="flex size-12 items-center justify-center rounded-full bg-mist text-forest transition-colors hover:bg-primary hover:text-white"
               >
                 <InstagramLogo size={22} weight="fill" />
               </a>
             </div>
           </div>
 
-          <div className="rounded-[1.75rem] bg-white p-7 shadow-[0_20px_50px_-30px_rgba(7,29,23,0.5)] sm:p-9">
-            {sent ? (
+          <div ref={formRef} className="card-soft rounded-[1.75rem] bg-white p-7 sm:p-9">
+            {status === 'sent' ? (
               <div className="flex h-full min-h-96 flex-col items-center justify-center text-center">
-                <span className="flex size-16 items-center justify-center rounded-full bg-lime text-ink">
+                <span className="flex size-16 items-center justify-center rounded-full bg-lime text-forest">
                   <CheckCircle size={32} weight="fill" />
                 </span>
                 <h3 className="mt-6 text-2xl font-extrabold text-ink">Cererea a fost trimisă</h3>
@@ -101,43 +173,86 @@ export default function ContactBlock() {
                 </p>
                 <button
                   type="button"
-                  onClick={() => setSent(false)}
+                  onClick={resetForm}
                   className="mt-8 rounded-full bg-mist px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-stone"
                 >
                   Trimite altă cerere
                 </button>
               </div>
             ) : (
-              <form
-                onSubmit={(event) => {
-                  event.preventDefault()
-                  setSent(true)
-                }}
-                className="grid gap-3"
-              >
+              <form onSubmit={handleSubmit} className="grid gap-3">
                 <h3 className="text-xl font-bold text-ink">Formular de programare</h3>
+
+                {prefilled ? (
+                  <div className="flex items-start gap-2 rounded-2xl bg-lime-mist px-4 py-3 text-sm text-forest">
+                    <Sparkle size={18} weight="fill" className="mt-0.5 shrink-0" />
+                    <span>
+                      Am completat formularul cu datele din conversația cu asistentul. Verificați-le și
+                      apăsați "Trimite cererea".
+                    </span>
+                  </div>
+                ) : null}
+
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <input className={field} placeholder="Nume și prenume" required />
-                  <input className={field} type="email" placeholder="Adresă de email" required />
+                  <input
+                    className={field}
+                    placeholder="Nume și prenume"
+                    autoComplete="name"
+                    value={values.name}
+                    onChange={update('name')}
+                    required
+                  />
+                  <input
+                    className={field}
+                    type="email"
+                    placeholder="Adresă de email"
+                    autoComplete="email"
+                    value={values.email}
+                    onChange={update('email')}
+                    required
+                  />
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <input className={field} type="tel" placeholder="Telefon" required />
-                  <input className={field} type="date" aria-label="Data dorită" required />
+                  <input
+                    className={field}
+                    type="tel"
+                    placeholder="Telefon"
+                    autoComplete="tel"
+                    value={values.phone}
+                    onChange={update('phone')}
+                    required
+                  />
+                  <input
+                    className={field}
+                    type="date"
+                    aria-label="Data dorită"
+                    value={values.date}
+                    onChange={update('date')}
+                    required
+                  />
                 </div>
                 <textarea
                   className={`${field} min-h-36 resize-none`}
                   placeholder="Descrie pe scurt problema"
+                  value={values.message}
+                  onChange={update('message')}
                 />
                 <label className="flex items-start gap-3 py-2 text-xs leading-relaxed text-muted">
-                  <input type="checkbox" required className="mt-0.5 size-4 shrink-0 accent-lime" />
+                  <input type="checkbox" required className="mt-0.5 size-4 shrink-0 accent-primary" />
                   Sunt de acord cu prelucrarea datelor personale în scopul programării.
                 </label>
+
+                {status === 'error' ? (
+                  <p className="rounded-2xl bg-sky px-4 py-3 text-sm text-ink">{errorText}</p>
+                ) : null}
+
                 <button
                   type="submit"
-                  className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-lime px-6 py-4 text-sm font-semibold text-ink transition-colors hover:bg-lime-bright"
+                  disabled={status === 'sending'}
+                  className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-primary-dark disabled:opacity-60"
                 >
                   <PaperPlaneTilt size={18} weight="fill" />
-                  Trimite cererea
+                  {status === 'sending' ? 'Se trimite...' : 'Trimite cererea'}
                 </button>
               </form>
             )}

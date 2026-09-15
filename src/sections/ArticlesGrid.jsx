@@ -35,7 +35,7 @@ export default function ArticlesGrid() {
           <div className="flex flex-wrap gap-3">
             <Link
               to={routes.faq}
-              className="inline-flex items-center gap-2 rounded-full bg-lime px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-lime-bright"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold bg-primary text-white transition-colors hover:bg-primary-dark"
             >
               Întrebări frecvente
               <ArrowRight size={18} weight="bold" />

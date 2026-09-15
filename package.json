@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/spa-fallback.mjs",
+    "build": "node scripts/build-knowledge.mjs && vite build && node scripts/spa-fallback.mjs",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:knowledge": "node scripts/build-knowledge.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

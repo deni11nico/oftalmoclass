@@ -32,6 +32,11 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Repository variables (Settings > Secrets and variables > Actions > Variables).
+          # Public by design: they end up in the browser bundle.
+          VITE_CHAT_API_URL: ${{ vars.VITE_CHAT_API_URL }}
+          VITE_WEB3FORMS_KEY: ${{ vars.VITE_WEB3FORMS_KEY }}
 
       - uses: actions/configure-pages@v5
 

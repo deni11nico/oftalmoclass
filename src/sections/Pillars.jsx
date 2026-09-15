@@ -14,9 +14,9 @@ export default function Pillars({ withStory = true }) {
             return (
               <div
                 key={pillar.title}
-                className="group rounded-[1.75rem] bg-mist p-7 transition-colors duration-300 hover:bg-forest"
+                className="group card-soft rounded-[1.75rem] bg-white p-7 transition-colors duration-300 hover:bg-forest"
               >
-                <span className="flex size-12 items-center justify-center rounded-full bg-lime text-ink">
+                <span className="flex size-12 items-center justify-center rounded-full bg-lime text-forest">
                   <Icon size={24} weight="duotone" />
                 </span>
                 <h3 className="mt-6 text-lg font-bold text-ink transition-colors group-hover:text-white">
@@ -46,7 +46,7 @@ export default function Pillars({ withStory = true }) {
               <dl className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
                 {stats.map((stat) => (
                   <div key={stat.label}>
-                    <dt className="text-3xl font-extrabold text-lime">{stat.value}</dt>
+                    <dt className="text-3xl font-extrabold text-lime-bright">{stat.value}</dt>
                     <dd className="mt-1.5 text-xs leading-snug text-white/60">{stat.label}</dd>
                   </div>
                 ))}

@@ -93,7 +93,7 @@ export default function Header() {
   return (
     <header ref={headerRef} className="sticky top-0 z-50 px-2 pt-2 pb-2 sm:px-4 sm:pt-4 sm:pb-3">
       <div className="shell">
-        <div className="rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-12px_rgba(7,29,23,0.25)] backdrop-blur-xl sm:px-5">
+        <div className="rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-16px_rgba(31,58,56,0.28)] backdrop-blur-xl sm:px-5">
           <div className="flex items-center justify-between gap-4">
             <Link to={routes.home} className="shrink-0">
               <img src={images.logo} alt="OftalmoClass" className="h-6 w-auto sm:h-7" />
@@ -113,7 +113,7 @@ export default function Header() {
             <div className="flex items-center gap-2">
               <Link
                 to={routes.contact}
-                className="hidden items-center gap-2 rounded-full bg-lime px-5 py-2.5 text-sm font-semibold whitespace-nowrap text-ink transition-colors hover:bg-lime-bright sm:inline-flex"
+                className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors hover:bg-primary-dark sm:inline-flex"
               >
                 <CalendarCheck size={18} weight="bold" />
                 Programare
@@ -167,7 +167,7 @@ export default function Header() {
               )}
               <Link
                 to={routes.contact}
-                className="mt-1 rounded-2xl bg-lime px-4 py-3 text-center text-sm font-semibold text-ink"
+                className="mt-1 rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-white"
               >
                 Fă o programare
               </Link>

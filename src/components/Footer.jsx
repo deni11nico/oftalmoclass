@@ -50,7 +50,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="flex size-11 items-center justify-center rounded-full bg-mist text-ink transition-colors hover:bg-lime"
+                className="flex size-11 items-center justify-center rounded-full bg-mist text-forest transition-colors hover:bg-primary hover:text-white"
               >
                 <FacebookLogo size={20} weight="fill" />
               </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex size-11 items-center justify-center rounded-full bg-mist text-ink transition-colors hover:bg-lime"
+                className="flex size-11 items-center justify-center rounded-full bg-mist text-forest transition-colors hover:bg-primary hover:text-white"
               >
                 <InstagramLogo size={20} weight="fill" />
               </a>

@@ -38,12 +38,12 @@ export default function EquipmentGrid() {
           ))}
         </div>
 
-        <div className="mt-4 grid gap-4 overflow-hidden rounded-[1.75rem] bg-ink lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <div className="mt-4 grid gap-4 overflow-hidden rounded-[1.75rem] bg-forest lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div className="p-8 sm:p-10">
             <h2 className="text-2xl leading-tight font-extrabold text-white italic sm:text-3xl">
               Fiecare investigație rămâne documentată
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/65">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/75">
               Rezultatele se salvează la fiecare vizită, așa că la următorul control comparăm
               evoluția în loc să pornim de la zero. Așa vezi și tu, nu doar medicul, ce s-a schimbat.
             </p>

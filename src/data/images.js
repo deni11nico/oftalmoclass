@@ -1,4 +1,4 @@
-import { withBase } from './asset'
+import { withBase } from './asset.js'
 
 export const images = withBase({
   logo: '/img/brand/logo-wordmark.png',

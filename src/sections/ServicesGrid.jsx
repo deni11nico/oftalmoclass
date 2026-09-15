@@ -11,7 +11,7 @@ export default function ServicesGrid() {
           {serviceGroups.map((group) => {
             const Icon = iconMap[group.icon]
             return (
-              <div key={group.title} className="rounded-[1.75rem] bg-mist p-8 sm:p-9">
+              <div key={group.title} className="card-soft rounded-[1.75rem] bg-white p-8 sm:p-9">
                 <div className="flex items-start gap-4">
                   <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-lime-soft text-moss">
                     <Icon size={24} weight="duotone" />

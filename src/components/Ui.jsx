@@ -1,12 +1,12 @@
 export function Badge({ children, tone = 'light', className = '' }) {
   const tones = {
-    light: 'bg-white text-ink shadow-[0_2px_10px_rgba(7,29,23,0.06)]',
-    dark: 'bg-white/12 text-lime-soft backdrop-blur-md',
-    soft: 'bg-lime-mist text-moss',
+    light: 'bg-white text-forest card-soft',
+    dark: 'bg-white/70 text-forest backdrop-blur-md',
+    soft: 'bg-lime-soft text-forest',
   }
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide uppercase ${tones[tone]} ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide uppercase sm:text-sm ${tones[tone]} ${className}`}
     >
       {children}
     </span>
@@ -22,9 +22,9 @@ export function Button({
 }) {
   const variants = {
     primary:
-      'bg-lime text-ink hover:bg-lime-bright shadow-[0_10px_30px_-12px_rgba(198,241,107,0.9)]',
-    ghost: 'bg-white/12 text-white backdrop-blur-md hover:bg-white/20',
-    dark: 'bg-ink text-white hover:bg-forest',
+      'bg-primary text-white hover:bg-primary-dark shadow-[0_12px_28px_-14px_rgba(47,143,131,0.7)]',
+    ghost: 'bg-white/80 text-forest backdrop-blur-md hover:bg-white',
+    dark: 'bg-forest text-white hover:bg-moss',
     quiet: 'bg-mist text-ink hover:bg-stone',
   }
   return (
