@@ -92,8 +92,9 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 px-2 pt-2 pb-2 sm:px-4 sm:pt-4 sm:pb-3">
-      <div className="shell">
-        <div className="rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-16px_rgba(31,58,56,0.28)] backdrop-blur-xl sm:px-5">
+      {/* spans the full width, aligned with the hero panel edges */}
+      <div>
+        <div className="rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-16px_rgba(31,58,56,0.28)] backdrop-blur-xl sm:px-6">
           <div className="flex items-center justify-between gap-4">
             <Link to={routes.home} className="shrink-0">
               <img src={images.logo} alt="OftalmoClass" className="h-6 w-auto sm:h-7" />
