@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { CalendarCheck, CaretDown, List, X } from '@phosphor-icons/react'
+import { CalendarCheck, CaretDown, ChatCircleDots, List, X } from '@phosphor-icons/react'
 import { nav, routes } from '../data/site'
 import { images } from '../data/images'
+import { openChat } from '../lib/chat'
 
 const linkBase = 'rounded-full px-3.5 py-2 text-sm font-medium whitespace-nowrap transition-colors'
 
@@ -112,6 +113,14 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={openChat}
+                className="hidden items-center gap-2 rounded-full bg-mist px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-forest transition-colors hover:bg-lime-soft md:inline-flex"
+              >
+                <ChatCircleDots size={18} weight="fill" />
+                Asistent AI
+              </button>
               <Link
                 to={routes.contact}
                 className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors hover:bg-primary-dark sm:inline-flex"
@@ -166,9 +175,20 @@ export default function Header() {
                   </NavLink>
                 ),
               )}
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false)
+                  openChat()
+                }}
+                className="mt-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-forest"
+              >
+                <ChatCircleDots size={18} weight="fill" />
+                Asistent AI
+              </button>
               <Link
                 to={routes.contact}
-                className="mt-1 rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-white"
+                className="rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-white"
               >
                 Fă o programare
               </Link>

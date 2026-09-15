@@ -4,7 +4,6 @@ import {
   ArrowRight,
   ArrowUp,
   CalendarCheck,
-  ChatCircleDots,
   Eye,
   FirstAid,
   MapPin,
@@ -12,7 +11,7 @@ import {
   X,
 } from '@phosphor-icons/react'
 import { clinic, routes } from '../data/site'
-import { isChatConfigured, sendChat } from '../lib/chat'
+import { CHAT_OPEN_EVENT, isChatConfigured, sendChat } from '../lib/chat'
 import { savePrefill, toFormPrefill } from '../lib/prefill'
 
 const STORAGE_KEY = 'oftalmoclass:chat'
@@ -152,6 +151,12 @@ export default function ChatWidget() {
   }, [items, busy, open])
 
   useEffect(() => {
+    const onOpen = () => setOpen(true)
+    window.addEventListener(CHAT_OPEN_EVENT, onOpen)
+    return () => window.removeEventListener(CHAT_OPEN_EVENT, onOpen)
+  }, [])
+
+  useEffect(() => {
     if (!open) return
     const onKey = (event) => event.key === 'Escape' && setOpen(false)
     document.addEventListener('keydown', onKey)
@@ -238,20 +243,6 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* floating launcher */}
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-label={open ? 'Închide asistentul' : 'Deschide asistentul virtual'}
-        aria-expanded={open}
-        className={`fixed right-4 bottom-4 z-[90] flex items-center gap-2 rounded-full bg-primary py-3.5 pr-5 pl-4 text-sm font-semibold text-white shadow-[0_18px_40px_-16px_rgba(47,143,131,0.85)] transition-all duration-300 hover:bg-primary-dark sm:right-6 sm:bottom-6 ${
-          open ? 'pointer-events-none translate-y-2 opacity-0' : 'translate-y-0 opacity-100'
-        }`}
-      >
-        <ChatCircleDots size={22} weight="fill" />
-        <span className="hidden sm:inline">Întrebați-ne</span>
-      </button>
-
       {open ? (
         <div
           role="dialog"

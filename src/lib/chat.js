@@ -33,3 +33,7 @@ export async function sendChat(messages, { signal } = {}) {
   }
   return data
 }
+
+// Lets any part of the page (the header button) open the assistant panel.
+export const CHAT_OPEN_EVENT = 'oftalmoclass:chat-open'
+export const openChat = () => window.dispatchEvent(new CustomEvent(CHAT_OPEN_EVENT))
