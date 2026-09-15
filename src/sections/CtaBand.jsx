@@ -4,7 +4,7 @@ import { clinic, routes } from '../data/site'
 
 export default function CtaBand() {
   return (
-    <section className="px-2 pb-4 sm:px-4">
+    <section className="px-2 pt-6 pb-4 sm:px-4 sm:pt-10">
       <div className="panel-light rounded-[2rem] px-8 py-14 sm:rounded-[2.75rem] sm:px-10 lg:py-16">
         <div className="shell flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div>
