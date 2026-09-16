@@ -5,7 +5,7 @@ import { nav, routes } from '../data/site'
 import { images } from '../data/images'
 import { openChat } from '../lib/chat'
 
-const linkBase = 'rounded-full px-3.5 py-2 text-sm font-medium whitespace-nowrap transition-colors'
+const linkBase = 'rounded-full px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors 2xl:px-3.5'
 
 function DesktopItem({ item, openMenu, setOpenMenu }) {
   const { pathname } = useLocation()
@@ -96,12 +96,13 @@ export default function Header() {
       {/* spans the full width, aligned with the hero panel edges */}
       <div>
         <div className="rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-16px_rgba(31,58,56,0.28)] backdrop-blur-xl sm:px-6">
-          <div className="flex items-center justify-between gap-4">
+          <div className="relative flex items-center justify-between gap-4">
             <Link to={routes.home} className="shrink-0">
               <img src={images.logo} alt="OftalmoClass" className="h-6 w-auto sm:h-7" />
             </Link>
 
-            <nav className="hidden items-center gap-0.5 xl:flex">
+            {/* pinned to the exact middle of the bar, independent of logo and button widths */}
+            <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-0.5 xl:flex">
               {nav.map((item) => (
                 <DesktopItem
                   key={item.label}
