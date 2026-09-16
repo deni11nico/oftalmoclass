@@ -72,6 +72,101 @@ function DesktopItem({ item, openMenu, setOpenMenu }) {
   )
 }
 
+function MobileMenu({ onClose }) {
+  const [openGroup, setOpenGroup] = useState(null)
+
+  // keep the page behind the menu from scrolling
+  useEffect(() => {
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [])
+
+  const rowBase =
+    'flex w-full items-center justify-between py-5 text-left text-2xl font-extrabold tracking-wide uppercase transition-colors'
+
+  return (
+    <div className="fixed inset-x-0 top-0 bottom-0 z-40 flex flex-col overflow-y-auto bg-cream px-6 pt-28 pb-8 xl:hidden">
+      <nav className="flex-1">
+        {nav.map((item) =>
+          item.children ? (
+            <div key={item.label} className="border-b border-stone">
+              <button
+                type="button"
+                onClick={() => setOpenGroup(openGroup === item.label ? null : item.label)}
+                aria-expanded={openGroup === item.label}
+                className={`${rowBase} ${openGroup === item.label ? 'text-primary' : 'text-ink'}`}
+              >
+                {item.label}
+                <CaretDown
+                  size={22}
+                  weight="bold"
+                  className={`shrink-0 text-muted transition-transform duration-200 ${
+                    openGroup === item.label ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              {openGroup === item.label ? (
+                <div className="grid gap-1 pb-5">
+                  {item.children.map((child) => (
+                    <NavLink
+                      key={child.to}
+                      to={child.to}
+                      onClick={onClose}
+                      className={({ isActive }) =>
+                        `rounded-2xl px-4 py-3 text-lg font-semibold transition-colors ${
+                          isActive ? 'bg-lime-soft text-forest' : 'text-ink/75 hover:bg-mist'
+                        }`
+                      }
+                    >
+                      {child.label}
+                    </NavLink>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ) : (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              onClick={onClose}
+              className={({ isActive }) =>
+                `${rowBase} border-b border-stone ${isActive ? 'text-primary' : 'text-ink'}`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ),
+        )}
+      </nav>
+
+      <div className="mt-8 grid gap-3">
+        <button
+          type="button"
+          onClick={() => {
+            onClose()
+            openChat()
+          }}
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-mist px-6 py-4 text-base font-bold text-forest transition-colors hover:bg-lime-soft"
+        >
+          <ChatCircleDots size={20} weight="fill" />
+          Asistent AI
+        </button>
+        <Link
+          to={routes.contact}
+          onClick={onClose}
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-base font-bold tracking-wide text-white uppercase transition-colors hover:bg-primary-dark"
+        >
+          <CalendarCheck size={20} weight="bold" />
+          Programare
+        </Link>
+      </div>
+    </div>
+  )
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState(null)
@@ -95,7 +190,7 @@ export default function Header() {
     <header ref={headerRef} className="sticky top-0 z-50 px-2 pt-2 pb-2 sm:px-4 sm:pt-4 sm:pb-3">
       {/* spans the full width, aligned with the hero panel edges */}
       <div>
-        <div className="rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-16px_rgba(31,58,56,0.28)] backdrop-blur-xl sm:px-6">
+        <div className="relative z-50 rounded-[1.75rem] bg-white/90 px-4 py-3 shadow-[0_8px_30px_-16px_rgba(31,58,56,0.28)] backdrop-blur-xl sm:px-6">
           <div className="relative flex items-center justify-between gap-4">
             <Link to={routes.home} className="shrink-0">
               <img src={images.logo} alt="OftalmoClass" className="h-6 w-auto sm:h-7" />
@@ -132,70 +227,20 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setOpen((v) => !v)}
-                aria-label="Deschide meniul"
-                className="flex size-11 items-center justify-center rounded-full bg-mist text-ink xl:hidden"
+                aria-label={open ? 'Închide meniul' : 'Deschide meniul'}
+                className={`flex size-11 items-center justify-center rounded-full transition-colors xl:hidden ${
+                  open ? 'bg-primary text-white' : 'bg-mist text-ink'
+                }`}
               >
                 {open ? <X size={20} weight="bold" /> : <List size={20} weight="bold" />}
               </button>
             </div>
           </div>
 
-          {open ? (
-            <div className="mt-3 grid max-h-[70vh] gap-1 overflow-y-auto rounded-3xl bg-mist p-2 xl:hidden">
-              {nav.map((item) =>
-                item.children ? (
-                  <div key={item.label} className="grid gap-1">
-                    <p className="px-4 pt-3 pb-1 text-xs font-semibold tracking-wide text-muted uppercase">
-                      {item.label}
-                    </p>
-                    {item.children.map((child) => (
-                      <NavLink
-                        key={child.to}
-                        to={child.to}
-                        className={({ isActive }) =>
-                          `rounded-2xl px-4 py-3 text-sm font-medium transition-colors ${
-                            isActive ? 'bg-white text-ink' : 'text-ink/70 hover:bg-white hover:text-ink'
-                          }`
-                        }
-                      >
-                        {child.label}
-                      </NavLink>
-                    ))}
-                  </div>
-                ) : (
-                  <NavLink
-                    key={item.to}
-                    to={item.to}
-                    className={({ isActive }) =>
-                      `rounded-2xl px-4 py-3 text-sm font-medium transition-colors ${
-                        isActive ? 'bg-white text-ink' : 'text-ink/70 hover:bg-white hover:text-ink'
-                      }`
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                ),
-              )}
-              <button
-                type="button"
-                onClick={() => {
-                  setOpen(false)
-                  openChat()
-                }}
-                className="mt-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-forest"
-              >
-                <ChatCircleDots size={18} weight="fill" />
-                Asistent AI
-              </button>
-              <Link
-                to={routes.contact}
-                className="rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-white"
-              >
-                Fă o programare
-              </Link>
-            </div>
-          ) : null}
         </div>
+
+        {/* outside the blurred pill: backdrop-filter would otherwise trap position:fixed */}
+        {open ? <MobileMenu onClose={() => setOpen(false)} /> : null}
       </div>
     </header>
   )
